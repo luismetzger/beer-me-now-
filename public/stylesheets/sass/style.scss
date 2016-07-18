@@ -1,3 +1,370 @@
-h2 {
-    color: blue;
+#overlay {
+    transition: all 0.4s ease;
+    &.is-focus {
+       background-color: #e74c3c !important;
+       opacity: 1 !important;
+     }
+}
+
+.navbar-default {
+    z-index: 2;
+
+}
+.beer-login-btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 1.2em;
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff !important;
+    width: 150px;
+    border: 2px solid;
+    transition: all 0.4s ease;
+
+    &:hover {
+        background: #fff !important;
+        color: #34495e !important;
+        border-color: transparent !important;
+    }
+}
+.navbar-home {
+    background-color: transparent;
+    border-color: transparent;
+    padding-top: 30px;
+}
+.navbar-header {
+    .navbar-brand {
+        font-family: 'Rock Salt', cursive;
+        color: #fff;
+        font-weight: 100;
+        font-size: 1.6em;
+    }
+}
+
+// Background animation for homepage
+$hint: #FAF8F8;
+$turqoise: #17EAD9;
+$cornflower-blue: #6078EA;
+$tundora: #4B4848;
+$electric-violet: #7C26F8;
+$snappy:  cubic-bezier(0.694,  0.048, 0.335, 1.000);
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes color-1 {
+  0% {
+    background-color: #EB73B9;
+  }
+  100% {
+    background-color: #17EAD9;
+  }
+}
+
+::selection {
+  background: $cornflower-blue;
+  color: white;
+  text-shadow: none;
+}
+
+::-webkit-selection{
+  background: $cornflower-blue;
+  color: white;
+  text-shadow: none;
+}
+
+.awesome_map_bg {
+
+    #home_map {
+       position: fixed;
+       z-index: 0;
+       top: 0;
+       bottom: 0;
+       left: 0;
+       right: 0;
+    }
+    .start_description {
+        z-index: 3;
+        text-align: center;
+        position: absolute;
+        white-space: normal;
+
+        h1 {
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            padding-bottom: 30px;
+            padding-top: 150px;
+        }
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em;
+            font-weight: 100;
+            color: #ffffff;
+            line-height: 36px;
+        }
+
+    }
+
+    .search_beer {
+        max-width: 900px;
+        margin: 40px auto;
+        padding-top: 40vh;
+
+
+        .title-container {
+          position: absolute;
+          top: 75%;
+          left: 50%;
+          width: 80%;
+          margin: 0 auto;
+          text-align: center;
+          overflow: hidden;
+          transform: translate(-50%, -50%);
+          z-index: 5;
+          .title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2em;
+            font-weight: 100;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+            transition-delay: 0.25s;
+            margin: 0;
+            color: #fff;
+          }
+          .title-down {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2em;
+            font-weight: 100;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            transition-delay: 0.25s;
+            margin: 0;
+            color: #fff;
+          }
+          .is-focus & {
+            .title {
+              transform: translateY(0);
+            }
+          }
+          .is-type & {
+            .title-down {
+              transform: translateY(-30px);
+            }
+            .title {
+              transform: translateY(-100%);
+            }
+          }
+        }
+
+        .field-container {
+          position: relative;
+          padding: 0;
+          margin: 3em auto 0;
+          border: 0;
+          width: 600px;
+          height: 65px;
+          z-index: 3;
+        }
+
+        .icons-container {
+          position: absolute;
+          top: 15px;
+          right: 170px;
+          width: 35px;
+          height: 35px;
+          overflow: hidden;
+        }
+
+        .icon-close {
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          width: 75%;
+          height: 75%;
+          opacity: 0;
+          cursor: pointer;
+          transform: translateX(-200%);
+          border-radius: 50%;
+          transition: opacity 0.25s ease, transform 0.43s $snappy;
+          &:before {
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            border: 2px solid transparent;
+            border-top-color: #e74c3c;
+            border-left-color: #e74c3c;
+            border-bottom-color: #e74c3c;
+            transition: opacity 0.2s ease;
+          }
+          .x-up {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            &:before {
+              content: "";
+              position: absolute;
+              bottom: 2px;
+              left: 3px;
+              width: 50%;
+              height: 2px;
+              background-color: $cornflower-blue;
+              transform: rotate(45deg);
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: 2px;
+              right: 0px;
+              width: 50%;
+              height: 2px;
+              background-color: $cornflower-blue;
+              transform: rotate(-45deg);
+            }
+          }
+          .x-down {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            &:before {
+              content: "";
+              position: absolute;
+              top: 5px;
+              left: 4px;
+              width: 50%;
+              height: 2px;
+              background-color: $cornflower-blue;
+              transform: rotate(-45deg);
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              top: 5px;
+              right: 1px;
+              width: 50%;
+              height: 2px;
+              background-color: $cornflower-blue;
+              transform: rotate(45deg);
+            }
+          }
+          .is-type & {
+            &:before {
+              opacity: 1;
+              animation: spin 0.85s infinite;
+            }
+            .x-up {
+              &:before, &:after {
+                animation: color-1 0.85s infinite;
+              }
+              &:after {
+                animation-delay: 0.3s;
+              }
+            }
+            .x-down {
+              &:before, &:after {
+                animation: color-1 0.85s infinite;
+              }
+              &:before {
+                animation-delay: 0.2s;
+              }
+              &:after {
+                animation-delay: 0.1s;
+              }
+            }
+          }
+        }
+
+        .icon-search {
+          position: relative;
+          top: 5px;
+          left: 8px;
+          width: 50%;
+          height: 50%;
+          opacity: 1;
+          border-radius: 50%;
+          border: 3px solid mix(#2c3e50, white, 35%);
+          transition: opacity 0.25s ease, transform 0.43s $snappy;
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -9px;
+            right: -2px;
+            width: 4px;
+            border-radius: 3px;
+            transform: rotate(-45deg);
+            height: 10px;
+            background-color: mix(#2c3e50, white, 35%);
+          }
+        }
+
+        input {
+             font-family: 'Roboto', sans-serif;
+             color: #34495e;
+             font-size: 1.2em;
+             font-weight: 100;
+        }
+        ::-webkit-input-placeholder {
+          font-family: 'Roboto', sans-serif;
+           color: #34495e;
+           opacity: 0.5;
+           font-size: 0.9em;
+           font-weight: 100;
+        }
+        input:focus::-webkit-input-placeholder {
+            opacity: 0;
+        }
+
+        .field {
+          border: 0;
+          width: 75%;
+          height: 100%;
+          padding: 6px 22px;
+          float: left;
+          background: white;
+          font-size: 1.5em;
+          font-weight: 100;
+          border-radius: 3px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          box-shadow: 0px 8px 15px rgba($tundora, 0.1);
+          transition: all 0.4s ease;
+          &:focus {
+            outline: none;
+            box-shadow: 0px 9px 20px rgba($tundora, 0.3);
+            + .icons-container {
+              .icon-close {
+                opacity: 1;
+                transform: translateX(0);
+              }
+              .icon-search {
+                opacity: 0;
+                transform: translateX(200%);
+              }
+            }
+          }
+        }
+        .beer-btn {
+            float: right;
+            width: 25%;
+            color: #fff;
+            padding: 18px 20px;
+            font-size: 1.4em;
+            box-shadow: 0px 8px 15px rgba($tundora, 0.1);
+            transition: all 0.4s ease;
+        }
+
+    }
 }

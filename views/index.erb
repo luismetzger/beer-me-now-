@@ -1,1 +1,78 @@
-<h2>Hello World!</h2>
+<!-- Second navbar for sign in -->
+<nav class="navbar navbar-default navbar-home">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">BeerMeNow!</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-2">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a class="btn btn-default btn-outline btn-circle collapsed beer-login-btn"  data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Sign in</a>
+        </li>
+      </ul>
+      <div class="collapse nav navbar-nav nav-collapse slide-down" id="nav-collapse2">
+        <form class="navbar-form navbar-right form-inline" role="form">
+          <div class="form-group">
+            <label class="sr-only" for="Email">Email</label>
+            <input type="email" class="form-control" id="Email" placeholder="Email" autofocus required />
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="Password">Password</label>
+            <input type="password" class="form-control" id="Password" placeholder="Password" required />
+          </div>
+          <button type="submit" class="btn btn-success">Sign in</button>
+        </form>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav><!-- /.navbar -->
+
+<!-- Homepage -->
+<div class="awesome_map_bg">
+    <div id='home_map'></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-2">
+                <div class="start_description">
+                    <h1 class="text-center">Welcome to beer me now!</h1>
+                    <h3 class="text-center">Find your favorite brewsky. Share experiences with your friends. Simply.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="search_beer">
+                    <div class="title-container">
+                      <h1 class="title">Beer me some info.</h1>
+                      <h1 class="title-down">Beering your search...</h1>
+                    </div>
+                    <form action="/" method="POST">
+                        <fieldset class="field-container">
+                              <input type="text" name="search" required="required" placeholder="Somebody better have my f@##$%! beer ..." class="field" />
+                              <div class="icons-container">
+                                <!-- <div class="icon-search"></div> -->
+                                <div class="icon-close">
+                                  <div class="x-up"></div>
+                                  <div class="x-down"></div>
+                                </div>
+                              </div>
+                              <input type="submit" class="btn btn-danger beer-btn" value="BEER ME!">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
