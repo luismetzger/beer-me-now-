@@ -3,17 +3,23 @@ $(document).ready(function() {
 
  //////Page load//////
   $("body").css("display", "none");
-  $("body").fadeIn(1000);
+  $("body").fadeIn(1500);
   $("a.transition").click(function(event){
     "use strict";
     event.preventDefault();
     linkLocation = this.href;
-    $("body").fadeOut(900, redirectPage);
+    $("body").fadeOut(1000, redirectPage);
   });
   function redirectPage() {
     "use strict";
     window.location = linkLocation;
   }
+
+  //Menu Toggle Script 
+   $("#menu-toggle").click(function(e) {
+       e.preventDefault();
+       $("#wrapper").toggleClass("toggled");
+   });
 
  //Fixed overlay for Homepage
  var docHeight = $(document).height();
@@ -59,8 +65,7 @@ var map = new mapboxgl.Map({
     container: 'home_map',
     style: 'mapbox://styles/mapbox/streets-v9',
     zoom: 13,
-    center: [-104.990251, 39.739236],
-    hash: true
+    center: [-104.990251, 39.739236]
 });
 
 map.on('load', function() {

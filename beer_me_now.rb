@@ -12,4 +12,8 @@ class BeerMeNow < Sinatra::Base
     end
 
     #POST - User fills out form on index page to get to results
+    post '/results' do
+
+        erb :results
+    end
 end
