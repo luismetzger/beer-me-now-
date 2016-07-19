@@ -389,23 +389,23 @@ $snappy:  cubic-bezier(0.694,  0.048, 0.335, 1.000);
     transition: all 0.5s ease;
 
     .toggled {
-        padding-left: 350px;
+        padding-left: 550px;
 
         @media screen and (min-width: 768px) {
             padding-left: 0;
         }
     }
     @media screen and (min-width: 768px) {
-        padding-left: 350px;
+        padding-left: 550px;
     }
 
     #sidebar-wrapper {
         z-index: 1;
         position: fixed;
-        left: 350px;
+        left: 550px;
         width: 0;
         height: 100%;
-        margin-left: -350px;
+        margin-left: -550px;
         overflow-y: auto;
         background: #000;
         -webkit-transition: all 0.5s ease;
@@ -414,23 +414,33 @@ $snappy:  cubic-bezier(0.694,  0.048, 0.335, 1.000);
         transition: all 0.5s ease;
 
         @media screen and (min-width: 768px) {
-              width: 350px;
+              width: 550px;
          }
     }
 }
 
 #page-content-wrapper {
     width: 100%;
+    height: 100%;
     position: absolute;
-    padding: 15px;
+    padding: 0;
+    margin: 0;
+
+    #map2 {
+      position:absolute;
+      top:0;
+      bottom:0;
+      width:100%;
+      height: 100%;
+    }
 
     .toggled {
         position: absolute;
-        margin-right: -350px;
+        margin-right: -550px;
     }
     #page-content-wrapper {
         position: absolute;
-        margin-right: -350px;
+        margin-right: -550px;
 
         @media screen and (min-width: 768px) {
             padding: 20px;
@@ -441,7 +451,7 @@ $snappy:  cubic-bezier(0.694,  0.048, 0.335, 1.000);
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 350px;
+    width: 550px;
     margin: 0;
     padding: 0;
     list-style: none;
