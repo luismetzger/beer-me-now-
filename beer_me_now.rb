@@ -16,4 +16,10 @@ class BeerMeNow < Sinatra::Base
 
         erb :results
     end
+
+    #GET - :id of individiual venue location details
+    get '/results/:id' do
+
+        erb :venue
+    end
 end

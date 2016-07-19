@@ -419,7 +419,7 @@ $snappy:  cubic-bezier(0.694,  0.048, 0.335, 1.000);
 
          .location-card {
              width: 90%;
-             height: 150px;
+             height: 200px;
              margin: 20% auto;
              background: #ddd;
              display: block;
@@ -433,8 +433,8 @@ $snappy:  cubic-bezier(0.694,  0.048, 0.335, 1.000);
 
 
              .pic {
-                 width: 35%;
-                 height: 150px;
+                 width: 40%;
+                 height: 200px;
                  display: inline-block;
                  background: #bbb;
 
@@ -442,8 +442,8 @@ $snappy:  cubic-bezier(0.694,  0.048, 0.335, 1.000);
              .bio {
                  display: inline-block;
                   background: #fff;
-                  width: 65%;
-                  height: 150px;
+                  width: 60%;
+                  height: 200px;
                   float: right;
                   vertical-align: top;
                   font-family: 'Poppins', sans-serif;
@@ -457,8 +457,7 @@ $snappy:  cubic-bezier(0.694,  0.048, 0.335, 1.000);
                   }
                   .more_detatils_btn {
                       float: right;
-                      margin-top: .7em;
-                      margin-right: 0.5em;
+                      margin-right: 1em;
                       transition: all 0.4s ease;
                   }
                   hr {
@@ -470,6 +469,15 @@ $snappy:  cubic-bezier(0.694,  0.048, 0.335, 1.000);
                       font-size: 1em;
                       padding-left: .5em;
                       color: #7d7d7d;
+                      display: inline-block;
+                  }
+                  .dist {
+                    float: right;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 1em;
+                    font-weight: 600;
+                    padding-right: 1.7em;
+                    color: #7d7d7d;
                   }
                   .desc {
                       font-family: 'Poppins', sans-serif;
@@ -478,6 +486,10 @@ $snappy:  cubic-bezier(0.694,  0.048, 0.335, 1.000);
                       padding-right: 1em;
                       padding-bottom: .5em;
                       color: #7d7d7d;
+                      max-width: 75ch;
+                      // white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
                   }
              }
          }
@@ -581,3 +593,305 @@ $snappy:  cubic-bezier(0.694,  0.048, 0.335, 1.000);
         margin-right: 0;
     }
 }
+
+
+
+/* Venue page styling */
+#map3 {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #e7eaf0;
+}
+.venue_address_header {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+  background-color: rgba(211, 104, 104, 0.9);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-size: 1.5em;
+  color: #fff;
+  text-align: center;
+
+  address {
+    margin-bottom: 0;
+  }
+}
+#venue {
+
+
+  .full_width_div{
+    margin: 0;
+    padding: 0;
+    .venue_details {
+      width: 100%;
+      height: auto;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+
+      .image-container {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        .venue_highlight_img {
+          width: 100%;
+          height: auto;
+
+        }
+        .overlay {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: rgba(44, 62, 80, 0.6);
+          transition: all 0.4s ease;
+
+          &:hover {
+            background: rgba(44, 62, 80, 0.9);
+          }
+
+          h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 100;
+            color: #fff;
+            opacity: 0.8;
+            text-align: center;
+            padding-top: 3em;
+            font-size: 3.2em;
+          }
+        }
+      }
+      .venue_info_header {
+        background-color: #f5f5f5;
+        border-bottom: 3px solid rgba(211,104,104,1);
+        padding-bottom: 1em;
+
+        .venue_logo {
+          width: 150px;
+          height: auto;
+          padding-top: 1em;
+        }
+        .venue_name {
+          padding-top: .5em;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 100;
+          color: #2c3e50;
+          font-size: 2.4em;
+
+
+        }
+        .venue_city_state {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 100;
+          color: #bdc3c7;
+          font-size: 1.6em;
+          margin-top: 0;
+
+
+        }
+        .venue_type {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 500;
+          color: #2c3e50;
+          font-size: 1.2em;
+
+        }
+        .btn-venue-phone {
+          margin-top: 3em;
+          margin-right: 1em;
+          padding: 1em 3em;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 100;
+          font-size: 1.4em;
+          transition: all 0.4s ease;
+
+        }
+      }
+      .venue_body_details {
+
+
+        p {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 100;
+          font-size: 1.2em;
+          color: #5E6D81;
+          max-width: 75ch;
+          padding: 2em 1em 1em;
+          // white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-align: justify;
+        }
+        .second_paragraph {
+          padding-top: 0;
+        }
+        .venue_carousel {
+          padding: 1.7em 3em 0;
+        }
+
+        aside {
+          .venue_social_links {
+            padding-top: 2em;
+
+            img {
+              width: 100px;
+            }
+          }
+          .people_like_container {
+
+            .venue_likes {
+              font-family: 'Poppins', sans-serif;
+              font-weight: 500;
+              color: #2c3e50;
+              padding-top: 1.5em;
+              font-size: 3em;
+            }
+            .venue_likes_subtitle {
+              font-family: 'Poppins', sans-serif;
+              font-weight: 100;
+              color: #2c3e50;
+              font-size: 1.5em;
+              text-transform: capitalize;
+              margin-top: 0;
+            }
+            .venue_like_btn {
+              margin: 1em auto;
+              padding: 1em 2em;
+              font-family: 'Poppins', sans-serif;
+              font-weight: 100;
+              font-size: 1.4em;
+              transition: all 0.4s ease;
+            }
+            .people_that_like {
+
+              a {
+
+                img {
+                  margin: 1em auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .venue_comments {
+    width: 100%;
+    height: auto;
+    background-color: #8e44ad;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Comments Section */
+
+#login { display: none; }
+.login,
+.logout {
+    position: absolute;
+    top: -3px;
+    right: 0;
+}
+.page-header { position: relative; }
+.reviews {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #2c3e50;
+    font-size: 1.6em;
+    margin: 10px auto 20px;
+}
+.notes {
+    color: #999;
+    font-size: 12px;
+}
+.media .media-object {
+  max-width: 80px;
+  margin-top: 2em;
+}
+.media-body {
+  position: relative;
+
+}
+.media-body .well {
+  background-color: #f8f8f9;
+  border: 1px solid #f1f1f1;
+}
+.media-date {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+.media-date li { padding: 0; }
+.media-date li:first-child:before { content: ''; }
+.media-date li:before {
+    content: '.';
+    margin-left: -2px;
+    margin-right: 2px;
+}
+.media-comment {
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  color: #2c3e50;
+  font-size: 1.2em;
+}
+.media-replied { margin: 0 0 20px 50px; }
+.media-replied .media-heading { padding-left: 6px; }
+
+.btn-circle {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+.btn-circle span { padding-right: 6px; }
+.embed-responsive { margin-bottom: 20px; }
+.tab-content {
+    padding: 50px 15px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.custom-input-file {
+    overflow: hidden;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: #eee url('https://s3.amazonaws.com/uifaces/faces/twitter/walterstephanie/128.jpg');
+    background-size: 120px;
+    border-radius: 120px;
+}
+input[type="file"]{
+    z-index: 999;
+    line-height: 0;
+    font-size: 0;
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity = 0);-ms-filter: "alpha(opacity=0)";
+    margin: 0;
+    padding:0;
+    left:0;
+}
+.uploadPhoto {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    display: none;
+    width: 50%;
+    height: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 50px;
+    cursor: pointer;
+}
+.custom-input-file:hover .uploadPhoto { display: block; }
