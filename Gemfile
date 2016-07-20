@@ -10,3 +10,6 @@ gem "rerun"
 gem "tux"
 gem "sass"
 gem 'pg'
+
+
+ruby "2.3.0"
