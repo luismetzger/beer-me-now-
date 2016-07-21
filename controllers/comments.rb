@@ -3,7 +3,7 @@ class BeerMeNow < Sinatra::Base
   set :method_override, true
 
   # RESTful Comments Controller Actions
-  #index
+  #GET - index
   get '/venue/:id' do
     @venue = Venue.find(params[:id])
     @comments = Comment.all
@@ -16,7 +16,7 @@ class BeerMeNow < Sinatra::Base
     erb :venue
   end
 
-  #Post a new comment
+  #POST - a new comment
   post '/venue/:id/comment/new' do
 
     @new_comment = Comment.new({:comment => params[:comment_body], :photo_url => "http://www.escience.upm.edu.my/images/FS/biology/Default_User.png"})
@@ -25,7 +25,20 @@ class BeerMeNow < Sinatra::Base
       redirect to "/venue/#{params[:id]}"
       puts @new_comment
     else
-      puts 'Not working'
+      puts 'Post not working'
+    end
+  end
+
+  #DELETE - comment
+  delete '/venue/:id/comment/:id/delete' do
+
+    @find_comment = Comment.find(params[:id])
+
+    if @find_comment.destroy
+      redirect to "/venue/#{params[:id]}/comment/#{@find_comment}"
+      puts @find_comment
+    else
+      puts 'Delete not working'
     end
   end
 

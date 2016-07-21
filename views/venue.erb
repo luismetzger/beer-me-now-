@@ -170,7 +170,10 @@
                                           <p class="media-comment">
                                             <%= t.comment %>
                                           </p>
-                                          <a class="btn btn-danger  text-uppercase" href="#" id="reply"><span class="glyphicon glyphicon-share-alt"></span> Delete</a>
+                                          <form action="/venue/<%= @venue.id %>/comment/<%= t.id %>/delete" method="POST">
+                                            <input name="_method" value="DELETE" type="hidden"/>
+                                            <button class="btn btn-danger  text-uppercase" type="submit" id="reply"><span class="glyphicon glyphicon-share-alt"></span> Delete</button>
+                                          </form>
                                           <a class="btn btn-primary text-uppercase" data-toggle="collapse" href="#replyOne"><span class="glyphicon glyphicon-comment"></span> Edit</a>
                                       </div>
                                     </div>
@@ -223,7 +226,7 @@
                                 </ul>
                             </div>
                             <div class="tab-pane" id="add-comment">
-                                <form action="/venue/<%= @venue.id %>/comment/new" method="post" class="form-horizontal" id="commentForm" role="form">
+                                <form action="/venue/<%= @venue.id %>/comment/new" method="POST" class="form-horizontal" id="commentForm" role="form">
                                     <div class="form-group">
                                         <label for="email" class="col-sm-2 control-label">Comment</label>
                                         <div class="col-sm-10">
