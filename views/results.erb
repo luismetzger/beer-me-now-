@@ -11,73 +11,19 @@
             </ul>
 
             <ul class="location-card center-block">
+              <% @venues.each do |t| %>
                <li>
-                    <img class="img-responsive pic" src="https://static.pexels.com/photos/1862/summer-sunshine-alcohol-drink-large.jpg" />
+                    <img class="img-responsive pic" src="<%= t.photo_url %>" />
                     <div class="bio">
-                        <h2 class="name">Brewery Name</h2>
+                        <h2 class="name"><%= t.name %></h2>
                         <hr>
-                        <h3 class="title">Category Name</h3>
+                        <h3 class="title"><%= t.primary_category %></h3>
                         <h3 class="dist">1.1 miles</h3>
                         <p class="desc">Co-Founder and CTO of Untappd, Web Developer, Beer Drinker &amp; Community Guy</p>
-                        <a href="/venue" class="btn btn-danger more_detatils_btn">View Details</a>
+                        <a href="#" class="btn btn-danger more_detatils_btn">View Details</a>
                     </div>
                 </li>
-                <li>
-                     <img class="img-responsive pic" src="https://static.pexels.com/photos/1862/summer-sunshine-alcohol-drink-large.jpg" />
-                     <div class="bio">
-                         <h2 class="name">Brewery Name</h2>
-                         <hr>
-                         <h3 class="title">Category Name</h3>
-                         <h3 class="dist">1.1 miles</h3>
-                         <p class="desc">Co-Founder and CTO of Untappd, Web Developer, Beer Drinker &amp; Community Guy</p>
-                         <a href="/venue" class="btn btn-danger more_detatils_btn">View Details</a>
-                     </div>
-                 </li>
-                 <li>
-                      <img class="img-responsive pic" src="https://static.pexels.com/photos/1862/summer-sunshine-alcohol-drink-large.jpg" />
-                      <div class="bio">
-                          <h2 class="name">Brewery Name</h2>
-                          <hr>
-                          <h3 class="title">Category Name</h3>
-                          <h3 class="dist">1.1 miles</h3>
-                          <p class="desc">Co-Founder and CTO of Untappd, Web Developer, Beer Drinker &amp; Community Guy</p>
-                          <a href="/venue" class="btn btn-danger more_detatils_btn">View Details</a>
-                      </div>
-                  </li>
-                  <li>
-                       <img class="img-responsive pic" src="https://static.pexels.com/photos/1862/summer-sunshine-alcohol-drink-large.jpg" />
-                       <div class="bio">
-                           <h2 class="name">Brewery Name</h2>
-                           <hr>
-                           <h3 class="title">Category Name</h3>
-                           <h3 class="dist">1.1 miles</h3>
-                           <p class="desc">Co-Founder and CTO of Untappd, Web Developer, Beer Drinker &amp; Community Guy</p>
-                           <a href="/venue" class="btn btn-danger more_detatils_btn">View Details</a>
-                       </div>
-                   </li>
-                   <li>
-                        <img class="img-responsive pic" src="https://static.pexels.com/photos/1862/summer-sunshine-alcohol-drink-large.jpg" />
-                        <div class="bio">
-                            <h2 class="name">Brewery Name</h2>
-                            <hr>
-                            <h3 class="title">Category Name</h3>
-                            <h3 class="dist">1.1 miles</h3>
-                            <p class="desc">Co-Founder and CTO of Untappd, Web Developer, Beer Drinker &amp; Community Guy</p>
-                            <a href="/venue" class="btn btn-danger more_detatils_btn">View Details</a>
-                        </div>
-                    </li>
-                    <li>
-                         <img class="img-responsive pic" src="https://static.pexels.com/photos/1862/summer-sunshine-alcohol-drink-large.jpg" />
-                         <div class="bio">
-                             <h2 class="name">Brewery Name</h2>
-                             <hr>
-                             <h3 class="title">Category Name</h3>
-                             <h3 class="dist">1.1 miles</h3>
-                             <p class="desc">Co-Founder and CTO of Untappd, Web Developer, Beer Drinker &amp; Community Guy</p>
-                             <a href="/venue" class="btn btn-danger more_detatils_btn">View Details</a>
-                         </div>
-                     </li>
-                
+              <% end %>
              </ul>
 
         </div>

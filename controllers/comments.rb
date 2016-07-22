@@ -1,4 +1,5 @@
 class BeerMeNow < Sinatra::Base
+  require = 'json'
 
   set :method_override, true
 
@@ -29,14 +30,27 @@ class BeerMeNow < Sinatra::Base
     end
   end
 
-  #DELETE - comment
-  delete '/venue/:id/comment/:id/delete' do
+  put '/comment/:id' do
+    @update_comment = Comment.find(params[:id])
+    @update_comment.comment = params['value']
+    # p params
+    if @update_comment.save
+      puts @update_comment
+    else
+      puts 'Not working'
+    end
 
-    @find_comment = Comment.find(params[:id])
+
+  end
+
+  #DELETE - comment
+  delete '/venue/:id/comment/:dc/delete' do
+
+    @find_comment = Comment.find(params[:dc])
 
     if @find_comment.destroy
-      redirect to "/venue/#{params[:id]}/comment/#{@find_comment}"
-      puts @find_comment
+      p 'comment was deleted'
+      redirect to "/venue/#{params[:id]}"
     else
       puts 'Delete not working'
     end

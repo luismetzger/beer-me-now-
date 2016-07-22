@@ -215,4 +215,19 @@ function initMap() {
 
 window.onload = function(){
   initMap();
+
+    // button LIKE
+    var likeBtn = document.getElementById('like_me');
+    var likeMeter = document.getElementById('like_meter');
+
+    var counter = 0;
+
+
+    likeBtn.addEventListener('click', function() {
+      counter++;
+      likeBtn.value = counter;
+      likeMeter.innerHTML = counter;
+
+    });
+
 };

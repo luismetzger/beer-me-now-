@@ -15,6 +15,7 @@ require './models/venue'
 require './beer_me_now'
 require './controllers/comments'
 require './controllers/venues'
+require './controllers/results'
 
 
 run BeerMeNow

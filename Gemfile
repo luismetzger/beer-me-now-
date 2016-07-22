@@ -10,6 +10,7 @@ gem "rerun"
 gem "tux"
 gem "sass"
 gem 'pg'
-
+gem 'json'
+gem 'faraday'
 
 ruby "2.3.0"
