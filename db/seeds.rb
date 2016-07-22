@@ -51,12 +51,7 @@ require 'json'
      db_hash[:facebook_url] = @venue_data['response']['venue']['contact']['facebook']
     # db_hash[:instragram_url] = @venue_data['response']['venue']['checkins']['items'].first['brewery']['contact']['instagram']
      db_hash[:venue_url] = @venue_data['response']['venue']['contact']['venue_url']
-    #  if !@venue_data['response']['venue']['media']['items'].empty?
-    #    db_hash[:photo_url] = @venue_data['response']['venue']['media']['items'].first['photo']['photo_img_lg']
-    #  else
-    #    p db_hash[:name]
-     #
-    #  end
+     
 
      Venue.create(db_hash)
    end

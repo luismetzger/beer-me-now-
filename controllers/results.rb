@@ -1,6 +1,6 @@
 class BeerMeNow < Sinatra::Base
 
-  
+
 
   set :method_override, true
 
@@ -10,6 +10,12 @@ class BeerMeNow < Sinatra::Base
     @venues = Venue.all
 
     p @venues
+
+    erb :results
+  end
+
+  get '/venue/:id' do
+    @venue = Venue.find(params[:id])
 
     erb :results
   end
